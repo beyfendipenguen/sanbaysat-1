@@ -1,0 +1,14 @@
+.wrapper a{
+ 
+  text-decoration: none;
+  color:black;
+  padding: 10px;
+  border-radius: 4px;
+  
+}
+
+.wrapper a:hover{
+  text-decoration: none;
+  color: #0b9cf0;
+}
+

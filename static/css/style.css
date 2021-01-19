@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/***Cardlar**/
+
+#crd{
+    background-color: #dbe5e6;
+    padding: 15px 0px;
+}
+
+#crd h1{
+    font-weight: 900;
+    font-size: 34px;
+    padding-bottom:54px;
+}
+
+
+.title {
+    text-align: center;
+    padding: 25px 0px;
+}
+
+.title p{
+    font-size:18px;
+}
+.title h1{
+  
+   border-bottom: 2px solid #dbe5e6;
+}
+.card-body{
+    box-shadow: 0 0 10px 7px rgb(0,0,0,0.2);
+}
+.card{
+    margin: 20px 10px;
+}
+
+.card-body a{
+    color: rgba(37, 156, 7, 0.356);
+    text-decoration: none;
+    font-size:15px;
+    margin-top: auto;
+    font-weight: 600;
+}
+
+.card-body a:hover{
+    color: bisque;
+    text-decoration: none;
+}
+
+.logo-position {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 3px;
+}
+
+.logo{
+    height: 40px;
+    width: 100px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.sidebar{
+    display: grid;
+    width: 20%;
+    border: 0px;
+    margin: 5px;
+
+}
+.content-right{
+    display: grid;
+    width: 80%;
+    border: 0px;
+    margin: 0px;
+}
+.menu {
+    width: 25%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+  }
+  
+  .main {
+    width: 75%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
