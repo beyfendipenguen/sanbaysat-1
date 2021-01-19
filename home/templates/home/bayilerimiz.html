@@ -1,0 +1,35 @@
+{% extends "home/index.html" %}
+{%load static%}
+{% block title %}Bayilerimiz{% endblock %}
+{% block css%}<link rel="stylesheet" href="{% static 'css/login.css'%}"> {% endblock %}
+{% block content %}
+<div class="wrapper">
+    <h1 class="text-center">Bayilerimiz</h1>
+    <h2 class="text-center">Size en yakın bayimizle<strong> iletişime</strong> geçebilirsiniz</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Bayi Adı</th>
+          <th scope="col">Telefon</th>
+          <th scope="col">Adres</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for bayi in bayiler %}
+
+        {%if bayi.aktif%}
+          <tr>
+            <th scope="row"></th>
+            <td><a href=""> {{bayi.adı}}</a></td>
+            <td>{{bayi.telefon}}</td>
+            <td>{{bayi.adres}}</td>
+          </tr>
+         {%endif%}
+
+        {%endfor%}
+      </tbody>
+    </table>
+  </div> 
+  
+{% endblock %}

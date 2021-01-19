@@ -1,0 +1,28 @@
+{%extends "home/index.html"%}
+
+{%block title%}Reçete Güncelle{%endblock%}
+
+{%block logout%}
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="/cikisyap">Çıkış Yap<span class="sr-only">(current)</span></a>
+  </li>
+</ul>
+{%endblock%}
+
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="col-lg-6">
+                <div id="ul">
+                    <form class="form-group" action="" method="POST">
+                        {%include "core/form_template.html"%}
+                        <input type="submit" value="gönder" class="btn-primary">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
