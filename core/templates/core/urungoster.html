@@ -1,0 +1,33 @@
+{%extends 'home/index.html'%}
+{%block title%}Sipariş Edilen Ürünler{%endblock%}
+{%block logout%}
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="/cikisyap">Çıkış Yap<span class="sr-only">(current)</span></a>
+  </li>
+</ul>
+{%endblock%}
+{%block content%}
+<div class="card card-body">
+
+  <table class="table table-sm">
+    <tr>
+      <th>Ürün</th>
+      <th>Adet</th>
+      
+    </tr>
+
+    {% for ürün in ürünler %}
+    <tr>
+
+      <td>{{ürün.ürün.adı}}</td>
+      <td>{{ürün.adet}}</td>
+     
+
+    </tr>
+    {% endfor %}
+
+
+  </table>
+</div>
+{%endblock%}
