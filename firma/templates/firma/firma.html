@@ -1,0 +1,61 @@
+{%extends 'home/index.html'%}
+{%block title%}Hoşgeldiniz{%endblock%}
+{%block logout%}
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link"  href="/cikisyap">Çıkış Yap<span class="sr-only">(current)</span></a>
+  </li>
+</ul>
+{%endblock%}
+{%block content%}
+<div class="row" style="margin-top: 11px;">
+  
+  <div class="col-3">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Siparişler</a>
+
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Ürünler</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Ödemeler</a>
+    
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Bayiler</a>
+
+      <a class="list-group-item list-group-item-action" id="list-recete-list" data-toggle="list" href="#list-recete"
+      role="tab" aria-controls="recete">Reçete</a>
+      
+     <a class="list-group-item list-group-item-action" id="list-hammadde-list" data-toggle="list" href="#list-hammadde"
+     role="tab" aria-controls="hammadde">Hammadde</a>
+    </div>
+  </div>
+ 
+  <div class="col-9">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+        {%include "firma/siparisler.html"%}
+      </div>
+
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+        {%include "firma/urunler.html"%}
+      </div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+        {%include "firma/odemeler.html"%}
+      </div>
+      
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+        {%include "firma/bayiler.html"%}
+      </div>
+       
+      <div class="tab-pane fade" id="list-recete" role="tabpanel" aria-labelledby="list-recete-list">
+        {%include "firma/recete.html"%}
+      </div>
+
+      <div class="tab-pane fade" id="list-hammadde" role="tabpanel" aria-labelledby="list-hammadde-list">
+        {%include "firma/tedarik.html"%}
+      </div>
+
+
+
+    </div>
+   
+  </div>
+</div>
+  {%endblock%}

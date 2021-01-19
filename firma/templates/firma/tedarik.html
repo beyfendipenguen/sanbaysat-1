@@ -1,0 +1,34 @@
+<div class="card card-body">
+
+  <table class="table table-sm">
+    <tr>
+      <th>Hammadde Adı</th>
+      <th>Depodaki Miktar</th>
+      <th>Tedarik Süresi</th>
+      <th>Kritik Seviye</th>
+      <th>Güncelle</th>
+      <th>Sil</th>
+    </tr>
+
+    {% for hammadde in hammaddeler %}
+    <tr>
+
+      <td>{{hammadde.adı}}</td>
+      <td>{{hammadde.depodaki_miktar}}</td>
+      <td>{{hammadde.tedarik_süresi}}</td>
+      <td>{{hammadde.kritik_seviye}}</td>
+      <td><a class="btn btn-sm btn-success text-white" role="button" href="/firma/hammaddeGüncelle/{{hammadde.pk}}">Güncelle</a></td>
+      <td><a class="btn btn-sm btn-danger text-white" role="button" href="/firma/hammaddeSil/{{hammadde.pk}}">Sil</a></td>
+      {% endfor %}
+
+
+  </table>
+
+
+<div class="row" style="margin-top: 11px;">
+
+  <div class="col-2">
+    <a href="/firma/hammaddeEkle" class="btn btn-m btn-success text-white">+HammaddeEkle</a>
+  </div>
+
+</div>

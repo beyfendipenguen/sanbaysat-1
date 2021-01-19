@@ -1,0 +1,29 @@
+<div class="card card-body">
+
+  <table class="table table-sm">
+    <tr>
+      <th>Bayi Adı</th>
+      <th>Şehir</th>
+      <th>Ülke</th>
+      <th>Telefon</th>
+      <th>Sil</th>
+      <th></th>
+    </tr>
+
+    {% for bayi in bayiler %}
+    <tr>
+      
+      <td>{{bayi.adı}}</td>
+      <td>{{bayi.şehir}}</td>
+      <td>{{bayi.ülke}}</td>
+      <td>{{bayi.telefon}}</td>
+      <td><a class="btn btn-sm btn-danger text-white" role="button" href="bayiSil/{{bayi.pk}}">Sil</a></td>
+      {%if bayi.aktif == False%}
+      <td><a class="btn btn-sm btn-info text-white" role="button" href="bayiOnayla/{{bayi.pk}}">Onayla</a></td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+
+
+  </table>
+</div>

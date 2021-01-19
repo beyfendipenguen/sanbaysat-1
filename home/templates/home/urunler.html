@@ -1,0 +1,98 @@
+{% extends "home/index.html" %}
+{%load static%}
+{% block title %}Bayilerimiz{% endblock %}
+{% block css%}
+<link rel="stylesheet" href="{% static 'css/login.css'%}"> {% endblock %}
+{% block content %}
+<div class="container">
+  <h1 class="text-center">Ürünlerimiz</h1>
+  <hr>
+  <div class="row">
+    <!-- Product1 -->
+    <div class="col-md-4 product-grid">
+      <div class="image">
+        <a href="#">
+          <img src="{% static 'img/lift/lift1.jpg'%}" alt="">
+          <div class="overlay">
+            <div class="detail"><a href="product-detail.html"
+                style="text-decoration: none;color: white;">Ürünüİncele</a></div>
+          </div>
+        </a>
+      </div>
+      <h4 class="text-left">MAR 2540</h4>
+
+    </div>
+    <!-- Product2 -->
+    <div class="col-md-4 product-grid">
+      <div class="image">
+        <a href="#">
+          <img src="{% static 'img/lift/lift2.jpg'%}" alt="">
+          <div class="overlay">
+            <div class="detail"><a href="product-detail.html"
+                style="text-decoration: none;color: white;">Ürünüİncele</a></div>
+          </div>
+        </a>
+      </div>
+      <h4 class="text-left">RAM 6579</h4>
+
+    </div>
+    <!-- Product3 -->
+    <div class="col-md-4 product-grid">
+      <div class="image">
+        <a href="#">
+          <img src="{% static 'img/lift/lift3.jpg'%}" alt="">
+          <div class="overlay">
+            <div class="detail"><a href="product-detail.html"
+                style="text-decoration: none;color: white;">Ürünüİncele</a></div>
+          </div>
+        </a>
+      </div>
+      <h4 class="text-left">MR 1245</h4>
+
+    </div>
+    <!-- Product4 -->
+    <div class="col-md-4 product-grid">
+      <div class="image"> 
+        <a href="#">
+          <img src="{% static 'img/lift/lift4.jpg'%}" alt="">
+          <div class="overlay">
+            <div class="detail"><a href="product-detail.html"
+                style="text-decoration: none;color: white;">Ürünüİncele</a></div>
+          </div>
+        </a>
+      </div>
+      <h4 class="text-left">RAM 2345</h4>
+
+    </div>
+    <!-- Product5 -->
+    <div class="col-md-4 product-grid">
+      <div class="image">
+        <a href="#">
+          <img src="{% static 'img/lift/lift5.jpg'%}" alt="">
+          <div class="overlay">
+            <div class="detail"><a href="product-detail.html"
+                style="text-decoration: none;color: white;">Ürünüİncele</a></div>
+          </div>
+        </a>
+      </div>
+      <h4 class="text-left">MRA 6734</h4>
+
+    </div>
+    <!-- Product6 -->
+    <div class="col-md-4 product-grid">
+      <div class="image">
+        <a href="#">
+          <img src="{% static 'img/lift/lift6.jpg'%}" alt="">
+          <div class="overlay">
+            <div class="detail"><a href=""
+                style="text-decoration: none;color: white;">Ürünüİncele</a></div>
+          </div>
+        </a>
+      </div>
+      <h4 class="text-left">ARM 3467</h4>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
