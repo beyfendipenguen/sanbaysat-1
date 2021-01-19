@@ -1,6 +1,6 @@
 # sanbaysat
 
-## Komut satırında projenin dosya dizini açarak aşağıdaki komutları sırası ile giriniz.
+## Komut satırında projenin dosya dizinini açarak aşağıdaki komutları sırası ile giriniz.
 
 - pip install -r requirements.txt 
 
