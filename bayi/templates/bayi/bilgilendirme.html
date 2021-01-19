@@ -1,0 +1,17 @@
+{% extends "home/index.html"%}
+
+{%block logout%}
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="/cikisyap">Çıkış Yap<span class="sr-only">(current)</span></a>
+  </li>
+</ul>
+{%endblock%}
+
+{% block content%}
+<center>
+ <h1>Kullanıcı hesabınız henüz onaylanmamıştır.</h1>
+ <br>
+ <a class="btn btn-sm btn-success text-white" role="button" href="/bayi/bayikayıt">Bayi Oluştur</a>
+</center>
+{% endblock %}

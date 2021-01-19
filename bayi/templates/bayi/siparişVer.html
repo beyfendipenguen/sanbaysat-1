@@ -1,0 +1,22 @@
+{% extends "home/index.html"%}
+{%block title%}Sipariş Ver{%endblock%}
+{%block logout%}
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="/cikisyap">Çıkış Yap<span class="sr-only">(current)</span></a>
+  </li>
+</ul>
+{%endblock%}
+
+{% block content %}
+<form action="" method="POST">
+    {%csrf_token%}
+    {%include 'core/form_template.html'%}
+    <input name="devamEt" class="btn btn-sm btn-primary text-white" type="submit" value="Ürün ekle">
+    <a class="btn btn-sm btn-success text-white" href="/bayi/siparişTamamla">Siparişi Tamamla</a>
+    
+   <!-- <a class="btn btn-sm btn-success text-white ml-1" href="/kayyıt yapan id alcak">Ürün eklemeye devam et</a> -->
+    
+</form>
+
+{% endblock %}
