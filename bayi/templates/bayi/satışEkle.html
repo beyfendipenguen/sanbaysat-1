@@ -1,0 +1,54 @@
+{% extends "home/index.html"%}
+{%block title%}Satış Ekle{%endblock%}
+
+{%block logout%}
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="/cikisyap">Çıkış Yap<span class="sr-only">(current)</span></a>
+  </li>
+</ul>
+{%endblock%}
+
+{% block content %}
+<div class="center-align">
+    <form action="" method="POST">
+        {{ form.non_field_errors }}
+        <label for="bayim">bayi:</label>
+        <select id="id_bayi" name="bayi">
+            {%for bayi in bayilerim%}
+                <option value="{{bayi.pk}}">{{bayi.adı}}</option>
+            {%endfor%}
+        </select>
+        {%csrf_token%}
+        <div class="fieldWrapper">
+            {{ form.müşteri.errors }}
+            <label for="{{ form.müşteri.id_for_label }}">müşteri:</label>
+            {{ form.müşteri }}
+            <a class="btn btn-sm btn-success text-white" role="button" href="/bayi/müşteriEkle">+Müşteri Ekle</a> 
+        </div>
+<div class="fieldWrapper">
+    {{ form.ürün.errors }}
+    <label for="{{ form.ürün.id_for_label }}">Ürün:</label>
+    {{ form.ürün }}
+</div>
+<div class="fieldWrapper">
+    {{ form.satış_fiyatı.errors }}
+    <label for="{{ form.satış_fiyatı.id_for_label }}">Satış Fiyatı:</label>
+    {{ form.satış_fiyatı }}
+</div>
+<div class="fieldWrapper">
+    {{ form.alış_fiyatı.errors }}
+    <label for="{{ form.alış_fiyatı.id_for_label }}">Alış Fiyatı:</label>
+    {{ form.alış_fiyatı }}
+</div>
+<div class="fieldWrapper">
+    {{ form.ödeme_aracı.errors }}
+    <label for="{{ form.ödeme_aracı.id_for_label }}">Ödeme Aracı:</label>
+    {{ form.ödeme_aracı }}
+</div>
+<input type="submit" value="gönder" class="btn-primary">
+
+</form>
+</div>
+
+{% endblock %}

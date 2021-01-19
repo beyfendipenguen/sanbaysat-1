@@ -1,0 +1,29 @@
+<div class="card card-body">
+  <table class="table table-sm">
+    <tr>
+      <th>Müşteri</th>
+      <th>Ürün Adı</th>
+      <th>İşlem Tarihi</th>
+      <th>Satış Fiyatı</th>
+      <th>Alış Fiyatı</th>
+      <th>Ödeme Aracı</th>
+      <th>Bakım Yap</th>
+      <th>Sil</th>
+      <th></th>
+    </tr>
+    {% for satis in bayisatis %}
+    <tr>
+      <td>{{satis.müşteri}}</td>
+      <td>{{satis.ürün}}</td>
+      <td>{{satis.tarih}}</td>
+      <td>{{satis.satış_fiyatı}}</td>
+      <td>{{satis.alış_fiyatı}}</td>
+      <td>{{satis.ödeme_aracı}}</td>
+      <td><a class="btn btn-sm btn-primary text-white" role="button" href="/bayi/bakımYap/{{satis.pk}}">Bakım Yap</a></td>
+
+      <td><a class="btn btn-sm btn-danger text-white" role="button" href="/bayi/satışSil/{{satis.pk}}">Sil</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a class="btn btn-sm btn-success text-white" role="button" href="/bayi/satışYap">+Satış Yap</a>
+</div>

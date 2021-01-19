@@ -1,0 +1,31 @@
+<div class="card card-body">
+
+  <table class="table table-sm">
+    <tr>
+      
+      <th>Müşteri</th>
+      <th>Ürün Adı</th>
+      <th>Bakıma Alma Tarihi</th>
+      <th>Gelecek Bakım Tarihi</th>
+      <th>İşlem Fiyatı</th>
+      <th>Sil</th>
+     
+    </tr>
+
+    {% for bakim in bakımlar %}
+    <tr>
+      
+      <td>{{bakim.satış.müşteri}}</td>
+      <td>{{bakim.satış.ürün}}</td>
+      <td>{{bakim.bakım_tarihi}}</td>
+      <td>{{bakim.gelecek_bakım_tarihi}}</td>
+      <td>{{bakim.tutar}}</td>      
+      <td><a class="btn btn-sm btn-danger text-white" role="button" href="bakimSil/{{bakim.pk}}">Sil</a></td>
+      
+
+    </tr>
+    {% endfor %}
+
+  </table>
+
+</div>
